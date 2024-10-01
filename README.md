@@ -6,33 +6,31 @@ vous êtes aujourd'hui à la foi, l'attaquant et la victime.
 
 ### Etape Attaquant
 
-Vous êtes un professeur et vous voulez tester la franchise de vos élèves.<br>
-Pour faire cela vous avez eu une petit idée, après avoir appris qu'il était possible d'executer du code lorsque qu'une personne dezip un dossier, on va donc implémenté un programme malveillant dans notre zip afin qu'il s'éxecuter lors d'un dézippage non sécurisé on appel ça le <strong>Zip Slip</strong>.
-afin de mettre votre plan à execution vous allez d'abord récupérer le programme python :
+Vous êtes un professeur et vous voulez tester l'honnêteté de vos élèves.<br> Pour cela, vous avez eu une petite idée : après avoir appris qu'il est possible d'exécuter du code lorsqu'une personne dézippe un dossier, vous allez implémenter un programme malveillant dans un fichier ZIP afin qu'il s'exécute lors d'un dézippage non sécurisé. Cela s'appelle une attaque <strong>Zip Slip</strong>.
 
-```
-Create_EvilZip.py
-```
+Pour mettre votre plan à exécution, vous allez d'abord récupérer le programme Python suivant :
 
-vous aurez besoin de python pour executer le programme et voici comment l'utilisé :
+`Create_EvilZip.py` 
+
+Vous aurez besoin de Python pour exécuter le programme, et voici comment l'utiliser :
 ```
 python Create_EvilZip.py dossier.zip
 ```
 
-Cependant vous devrez vous même réaliser certaine tâche dans le programme de création du zip piègé.
+Cependant, vous devrez réaliser certaines modifications dans le programme de création du ZIP piégé.
 
-maintenant vous avez un zip totalement infecté, celui-ci executera donc le programme que vous avez intégrer dans votre zippeur malveillant.
+Maintenant, vous avez un ZIP totalement infecté. Celui-ci exécutera donc le programme que vous avez intégré dans votre archive ZIP malveillante.
 
-Vous enverrez à votre victime, le zip et le UnZip_Program.py qui est vunérable à ce type d'attaque car il manque une vérification.
+Vous enverrez à votre victime le fichier ZIP et le programme `UnZip_Program.py`, qui est vulnérable à ce type d'attaque car il manque une vérification.
+
 ### Etape Victime
 
-notre victime va donc recevoir un fichier zip contenant tous ces "précieuse correction"
+notre victime va donc recevoir un fichier zip contenant tous ces "précieuses corrections"
 
 `python UnZip_program.py dossier.zip` : maintenant executer ce programme sur votre dossier zipper<br>
 
-Comme vous pouviez vous en doutez le piège c'est donc activé !
+Comme vous vous en doutiez, le piège s'est activé !
+Mais il existe un moyen de sécuriser le dézippage. Pour cela, vous avez à votre disposition :
+`UnZip_Secured_program.py`
 
-Mais il y a un moyen de sécurisé le dézipage, pour cela vous avez :
-```
-UnZip_Secured.py
-```
+Vous devez donc remplacer les `TODO()`
