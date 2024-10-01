@@ -7,7 +7,7 @@ os.makedirs('evil', exist_ok=True)
 # Créer un script Bash malveillant
 with open('evil/../../malicious.sh', 'w') as f:
     f.write("#!/bin/bash\n")
-    f.write('echo "Je t\'ai bien eu!" > /tmp/hacked.txt\n')
+    f.write('echo \"Salut c est fanta\"')
 
 # Rendre le script exécutable
 os.chmod('evil/../../malicious.sh', 0o755)

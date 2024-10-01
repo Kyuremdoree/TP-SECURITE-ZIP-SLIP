@@ -13,5 +13,5 @@ def unzip_and_execute(zip_path, extract_path):
         subprocess.run([malicious_script_path], shell=True)
 
 # Exemple d'utilisation
-unzip_and_execute('evil_zip.zip', 'unzipped')
+unzip_and_execute('evil_zip.zip', '.unzipped')
 print("Extraction non sécurisée avec exécution terminée")
