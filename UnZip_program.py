@@ -13,6 +13,5 @@ def unzip_and_execute(zip_path, extract_path):
         print(f"Exécution du script malveillant : {malicious_script_path}")
         subprocess.run([malicious_script_path], shell=True)
 
-# Exemple d'utilisation
 unzip_and_execute(sys.argv[1], '.prank')
 print("Extraction non sécurisée avec exécution terminée")
