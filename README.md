@@ -14,13 +14,13 @@ afin de mettre votre plan à execution vous allez d'abord récupérer le program
 Create_EvilZip.py
 ```
 
-Celui-ci ce base sur le GitHub de ceasarsotovalero :
-https://github.com/cesarsotovalero/zip-slip-exploit-example/blob/master/evilarc.py
 
 vous aurez besoin de python pour executer le programme et voici comment l'utilisé :
 ```
 python Create_EvilZip.py -d 10 -o unix .prank.sh
 ```
+
+Cependant vous devrez vous même effectué le retour en arrière dans l'arborescence.
 
 maintenant vous avez un zip totalement infecté, celui-ci executera donc le programme <strong>.prank.sh</strong>.
 
