@@ -1,6 +1,7 @@
 import zipfile
 import os
 import subprocess
+import sys
 
 def unzip_and_execute(zip_path, extract_path):
     with zipfile.ZipFile(zip_path, 'r') as zip_ref:
@@ -13,5 +14,5 @@ def unzip_and_execute(zip_path, extract_path):
         subprocess.run([malicious_script_path], shell=True)
 
 # Exemple d'utilisation
-unzip_and_execute('evil_zip.zip', '.unzipped')
+unzip_and_execute(sys.argv[1], '.prank')
 print("Extraction non sécurisée avec exécution terminée")
